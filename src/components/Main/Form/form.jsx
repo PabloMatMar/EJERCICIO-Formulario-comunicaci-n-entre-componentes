@@ -64,7 +64,7 @@ class Form extends Component {
         <label htmlFor="age">Age:</label><br />
         <input type="number" name="age" ref={this.age} placeholder="your age whit numbers" onChange={this.handleChange} /><br />
 
-        {this.state.user.username ? <button type="submit" onClick={this.sendName}>Login</button> : ""}
+        {this.state.user.username && this.state.user.email && this.state.user.url ? <button type="submit" onClick={this.sendName}>Login</button> : ""}
       </form>
     </div>;
   }
