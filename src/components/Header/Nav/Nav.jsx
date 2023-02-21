@@ -5,13 +5,17 @@ import { userContext } from '../../../context/userContext';
 class Nav extends Component {
   render() {
     return <div><nav>
-      <Link to="/">Home</Link>
-      <Link to="/DataForm">Data</Link>
-      <Link to="/Form">Form</Link>
+      <button>
+      <Link to="/DataForm"> Data </Link>
+      </button>
+      <button>
+      <Link to="/Form"> Form </Link>
+      </button>
     </nav>
     <userContext.Consumer>
         {({ logout, user }) => user.username ?
-          <span>Hello, {user.username}!
+          <span>
+          <p>Hello, {user.username}!</p><br />
           <button variant="contained" size="small" onClick={logout}>Logout</button></span>
           : ""
         }

@@ -7,14 +7,14 @@ class Card extends Component {
       <h4>Datos Usuario logeado:</h4>
 
       <userContext.Consumer>
-        {({ user }) => user ?
+        {({ user }) => user.username ? 
         <span>
           <p>Edad:{user.username}</p>
           <p>Email:{user.email}</p>
           <img src={user.url}></img>
           <p>Edad:{user.age}</p>
           </span>
-          : ""
+          : <p>No hay usuario logeado.</p>
         }
       </userContext.Consumer>
     </div>;
